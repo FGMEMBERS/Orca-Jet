@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Glass cockpit -->
+  <model>
+    <path>Aircraft/Orca-Jet/Models/Panel/glass-cockpit/eadi.xml</path>
+    <offsets>
+      <x-m> -1.632 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.51 </z-m>
+     <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   -20.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
+

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>orca_jet.ac</path>
+
+
+ 
+  <!-- engine flame -->
+
+  <model>
+    <path>Aircraft/Orca-Jet/Models/effects/flammes/flammesG.xml</path>
+    <offsets>
+      <x-m>  0.78 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> 0.09 </z-m>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/Orca-Jet/Models/Panel/panel.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+
+<!-- cockpit -->
+
+	<!-- Joystick -->
+	<animation>
+		<object-name>joystick</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.374</x-m>
+			<y-m>0</y-m>
+			<z-m>0.148</z-m>
+		</center>
+	</animation>
+	<animation>
+		<object-name>joystick</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<factor>20</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>-1.374</x-m>
+			<y-m>0</y-m>
+			<z-m>0.148</z-m>
+		</center>
+	</animation>
+
+ <!-- rudderbar -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rudderbar</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>27</factor>
+  <center>
+   <x-m>-1.675</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.02</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- landing gear lever -->
+
+  <animation>
+    <type>translate</type>
+    <object-name>LGlever</object-name>
+    <property>controls/gear/gear-down</property>
+    <factor> 0.142 </factor>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.0 </y>
+      <z> 0.02 </z>
+    </axis>
+  </animation>
+
+<!-- flaps control -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>flaps-lever</object-name>
+    <property>controls/flight/flaps</property>
+    <factor> 52 </factor>
+    <center>
+      <x-m> -1.36 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  0.086 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+<!-- Spoiler Control -->
+
+<animation>
+  <type>translate</type>
+  <object-name>spoiler-control</object-name>
+  <property>/controls/flight-surfaces/spoilers</property>
+  <factor>1</factor>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.095</dep>
+        </entry>
+		</interpolation>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- throttle -->
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>throttle</object-name>
+  <property>/controls/engines/engine/throttle</property>
+  <factor>-55</factor>
+  <center>
+	<x-m>-1.245</x-m>
+	<y-m>0</y-m>
+	<z-m>0.082</z-m>
+  </center>
+ <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ 
+  <!-- ruddervators -->
+  <animation>
+    <type>rotate</type>
+    <object-name>left-ruddervator</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 12 </factor>
+    <axis>
+      <x1-m>  2.486 </x1-m>
+      <y1-m> -0.0342 </y1-m>
+      <z1-m>  0.69 </z1-m>
+      <x2-m>  2.913 </x2-m>
+      <y2-m> -0.975 </y2-m>
+      <z2-m>  -0.036 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>right-ruddervator</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 12 </factor>
+    <axis>
+      <x1-m>  2.486 </x1-m>
+      <y1-m>  0.0342 </y1-m>
+      <z1-m>  0.69 </z1-m>
+      <x2-m>  2.913 </x2-m>
+      <y2-m>  0.975 </y2-m>
+      <z2-m>  -0.036 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>left-ruddervator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -12 </factor>
+    <axis>
+      <x1-m>  2.486 </x1-m>
+      <y1-m> -0.0342 </y1-m>
+      <z1-m>  0.69 </z1-m>
+      <x2-m>  2.913 </x2-m>
+      <y2-m> -0.975 </y2-m>
+      <z2-m>  -0.036 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>right-ruddervator</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 12 </factor>
+    <axis>
+      <x1-m>  2.486 </x1-m>
+      <y1-m>  0.0342 </y1-m>
+      <z1-m>  0.69 </z1-m>
+      <x2-m>  2.913 </x2-m>
+      <y2-m>  0.975 </y2-m>
+      <z2-m>  -0.036 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>leftaileron</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 16 </factor>
+    <axis>
+      <x1-m>  1.000 </x1-m>
+      <y1-m> -2.902 </y1-m>
+      <z1-m> -0.018 </z1-m>
+      <x2-m>  0.473 </x2-m>
+      <y2-m> -0.977 </y2-m>
+      <z2-m>  0.007 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightaileron</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -16 </factor>
+    <axis>
+      <x1-m>  1.000 </x1-m>
+      <y1-m>  2.902 </y1-m>
+      <z1-m> -0.018 </z1-m>
+      <x2-m>  0.473 </x2-m>
+      <y2-m>  0.977 </y2-m>
+      <z2-m>  0.007 </z2-m>
+    </axis>
+  </animation>
+
+ <!-- flaps -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftaileron</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> 20 </factor>
+    <axis>
+      <x1-m>  1.000 </x1-m>
+      <y1-m> -2.902 </y1-m>
+      <z1-m> -0.018 </z1-m>
+      <x2-m>  0.473 </x2-m>
+      <y2-m> -0.977 </y2-m>
+      <z2-m>  0.007 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightaileron</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor> -20 </factor>
+    <axis>
+      <x1-m>  1.000 </x1-m>
+      <y1-m>  2.902 </y1-m>
+      <z1-m> -0.018 </z1-m>
+      <x2-m>  0.473 </x2-m>
+      <y2-m>  0.977 </y2-m>
+      <z2-m>  0.007 </z2-m>
+    </axis>
+  </animation>
+
+<animation>
+    <type>select</type>
+    <object-name>frontgear</object-name>
+    <object-name>maingear</object-name>
+    <condition>
+      <not>
+        <equals>
+          <property>gear/gear[0]/position-norm</property>
+          <value> 0 </value>
+        </equals>
+      </not>
+    </condition>
+  </animation>
+
+  <!-- Canopy -->
+  <animation>
+    <name>Canopyopen</name>
+    <object-name>canopyframe</object-name>
+    <object-name>canopy</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Canopyopen</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -110 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.883 </x-m>
+      <y-m>  0.280 </y-m>
+      <z-m>  0.445 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0.24 </z>
+    </axis>
+  </animation>
+
+  <!--light effects -->
+  <model>
+    <path>Aircraft/Orca-Jet/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> -0.31 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.890 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Orca-Jet/Models/lights/beacon.xml</path>
+    <offsets>
+      <x-m> 2.639 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.726 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Orca-Jet/Models/lights/RedLight.xml</path>
+    <offsets>
+      <x-m>  0.470 </x-m>
+      <y-m> -2.8406 </y-m>
+      <z-m> -0.0107 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Orca-Jet/Models/lights/GreenLight.xml</path>
+    <offsets>
+      <x-m>  0.470 </x-m>
+      <y-m>  2.8406 </y-m>
+      <z-m> -0.0107 </z-m>
+    </offsets>
+  </model>
+
+
+
+</PropertyList>
+

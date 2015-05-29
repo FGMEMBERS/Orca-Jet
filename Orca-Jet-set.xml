@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Orca-Jet simulation config.
+
+July 2013, 
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Orca-Jet</description>
+  <author>LesterBoffo FDM/3D model</author>
+  
+  <flight-model>yasim</flight-model>
+  <aero>Orca-Jet-yasim</aero>
+
+  <startup>
+    <splash-texture>Aircraft/Orca-Jet/Orca-Jet-splash.png</splash-texture>
+  </startup>
+
+
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+ 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+
+
+  <sound>
+   <path>Aircraft/Orca-Jet/Sounds/Orca-Jet-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/Orca-Jet/Models/orcajet-model.xml</path>
+  </model> 
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <x-offset-m archive="y" type="double">0.0</x-offset-m>
+    <y-offset-m archive="y" type="double">0.735</y-offset-m>  <!-- up-down -->
+    <z-offset-m archive="y" type="double">-0.85</z-offset-m> <!-- fore-back -->
+    <pitch-offset-deg>-3.5</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <hud>
+   <enable3d>true</enable3d>
+  </hud>  
+
+    <help>
+   <key>
+        <name>d</name>
+        <desc>Open/Close pilot canopy</desc>
+      </key>
+    <text> ***Orca-Jet flight instructions***
+ This is a fictional aircraft inspired by a couple of Youtube videos of experimenters who took old Diesel truck turbo-chargers and made them into jet engines.  I just took the concept a few steps further into simulation by making a small micro jet airframe to place the engine into.  This simulation is highly subjective in concept, and is in no way realssitc concerning the actual power of a truck turbo-jet conversion.
+  
+****  Flying the Orca-Jet ****
+
+  This plane is very small, very light, very fast, and has a realatively high landing and take -off speed.  Best climb rate is at about 200 knots, cruise at 16000 feet is roughly 280 knots.  Fly this plane with full power in normal flight conditions and don't attempt aerobatics.  As any wild diversions from smooth flight will kill what little speed you have gained.
+  *** Landings ***
+ Landings take finesse.   Reduce throttle to near idle, and let it slowly bleed-off speed and set up a -600~-800 fpm descent. Lower flaps at 140 knots, gear at 130 knots and add throttle to keep it above 115 knots in approach. Use your elevator trim to regulate speed on final, and keep engine at mid power until you need to flare for landing.  It tends to float in ground effect so let it gently touch down at 100~95 knots.  It will pogo violently if you touch down nose wheel first or abruptly.
+ </text>
+
+  </help>
+
+
+<weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>230</max-lb>
+      <min-lb>130</min-lb>
+    </weight>
+
+  </sim>
+
+ <!-- Map Keys -->
+ <input>
+    <keyboard include="Nasal/orca-keyboard.xml"/>
+  </input>
+
+<nasal>
+    <Orca-Jet>
+      <file>Aircraft/Orca-Jet/Nasal/light.nas</file>
+  </Orca-Jet>
+  <doors>
+    <file>Aircraft/Orca-Jet/Nasal/doors.nas</file>
+  </doors>
+</nasal>
+
+
+</PropertyList>
+
+
+
+
